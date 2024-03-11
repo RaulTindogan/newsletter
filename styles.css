@@ -1,0 +1,246 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-bold";
+    src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--Charcoal-Grey);
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    border-radius: 5px;
+}
+
+.illustration {
+    width: 100%;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: "Roboto-bold", sans-serif;
+    color: var(--Dark-Slate-Grey);
+}
+
+ul {
+    margin-bottom: 30px;
+}
+
+p, li {
+    color: var(--Dark-Slate-Grey);
+}
+
+.before-h1 {
+    margin: 20px 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.icon-list {
+    margin-right: 10px;
+}
+
+.content {
+    padding: 30px 20px;
+}
+
+.email-label-error {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.error-container {
+    display: none;
+    color: var(--Tomato);
+}
+
+.email {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid var(--Grey);
+    color: var(--Dark-Slate-Grey);
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.submit {
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: var(--Tomato);
+    box-shadow: 2px 10px 10px rgb(205, 205, 205);
+}
+
+.input-error-state {
+    color: var(--Tomato);
+    border-color: var(--Tomato);
+    background-color: hsla(4, 100%, 67%, 0.198);
+    font-weight: bold;
+}
+
+.error-active {
+    display: block;
+}
+
+.success-modal {
+    display: none;
+    background-color: var(--White);
+    height: 100vh;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 2rem;
+    color: var(--Charcoal-Grey);
+    margin: 20px 0;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 60%;
+}
+
+.modal-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.dismiss-container {
+   height: 40%;
+   display: flex;
+   align-items: flex-end;
+   padding-bottom: 30px;
+}
+
+.dismiss-button{
+    width: 100%;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    font-weight: bold;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.dismiss-button:hover {
+    background-color: var(--Tomato);
+    box-shadow: 2px 10px 10px rgb(205, 205, 205);
+}
+
+span {
+    font-weight: bold;
+    color: var(--Dark-Slate-Grey);
+}
+
+.modal-active {
+    display: block;
+}
+
+@media screen and (min-width: 425px) {
+    .container {
+        width: 400px;
+        margin: 20px 0;
+    }
+
+    .success-modal {
+        width: 400px;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 10px;
+        padding: 50px 40px;
+    }
+
+    .modal-content, .dismiss-container {
+        height: auto;
+    }
+
+    .modal-content {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 800px;
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .illustration {
+        border-radius: 10px;
+        background-image: url('assets/images/illustration-sign-up-desktop.svg');
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .content {
+        padding: 50px 30px;
+    }
+
+    .success-modal {
+        height: auto;
+        width: 500px;
+        padding: 50px;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+
+

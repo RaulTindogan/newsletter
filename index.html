@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <title>Newsletter Sign Up</title>
+</head>
+<body>
+  <div class="container" id="container">
+    <div>
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="illustration">
+    </div>
+    <div class="content">
+      <h1>Stay updated!</h1>
+      <p class="before-h1">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>
+          <div>
+            <img src="assets/images/icon-list.svg" alt="" class="icon-list">
+          </div>
+          <p>Product discovery and building what matters</p></li>
+        <li>
+          <div>
+            <img src="assets/images/icon-list.svg" alt="" class="icon-list">
+          </div>
+          <p>Measuring to ensure updates are a success</p></li>
+        <li>
+          <div>
+            <img src="assets/images/icon-list.svg" alt="" class="icon-list">
+          </div>
+          <p>And much more!</p></li>
+      </ul>
+      <form id="form">
+        <div class="email-label-error">
+          <p class="email-label">Email address</p>
+          <p id="error-container" class="error-container">Valid email required</p>
+        </div>
+        <input type="email" name="email" id="email" class="email" placeholder="email@company.com">
+        <input type="submit" value="Subscribe to monthly newsletter" class="submit">
+      </form>
+    </div>
+  </div>
+  <div class="success-modal" id="modal">
+    <div class="modal-content">
+      <div>
+        <img src="assets/images/icon-list.svg" alt="" class="modal-icon">
+      </div>
+      <div>
+        <h2>Thanks for subscribing!</h2>
+        <p>A confimation email has been sent to <span>ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription</p>
+      </div>
+    </div> 
+    <div class="dismiss-container">
+      <button id="dismiss-button" class="dismiss-button">Dismiss message</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
